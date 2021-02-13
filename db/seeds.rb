@@ -21,7 +21,7 @@ jordan = Nurse.create(name:"Jordan")
 
 jessica = Patient.create(name:"Jessica", need:"Brain Tumor")
 charlotte = Patient.create(name:"Charlotte", need:"Plantar Fasciitis")
-emmett = Patient.create(name:"Emmett", need:"Pulmonary Enema")
+emmett = Patient.create(name:"Emmett", need:"Pulmonary Edema")
 dave = Patient.create(name:"Dave", need:"Bypass")
 max = Patient.create(name:"Max", need: "Tonsilitis")
 
@@ -31,7 +31,6 @@ room3 = Room.create(number: 201)
 room4 = Room.create(number: 202)
 room5 = Room.create(number: 505)
 
-####Update seeds#######
 surgery1 = Surgery.create(doctor_id: bill.id, nurse_id: judy.id, patient_id:dave.id, room_id: room1.id, time: 8)
 surgery2 = Surgery.create(doctor_id: hang.id, nurse_id: robert.id, patient_id:jessica.id, room_id: room2.id, time: 12)
 surgery3 = Surgery.create(doctor_id: watson.id, nurse_id: hector.id, patient_id:emmett.id, room_id: room3.id, time: 15)
