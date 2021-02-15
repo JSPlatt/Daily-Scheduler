@@ -1,8 +1,11 @@
 <h1>Here is a List of Today's Surgeries</h1>
 
 <ol>
-    <li>
-        
+    <% @surgeries.each do |surgery| %>
+        <li>
+            <%=link_to surgery.room.number, surgery_path(surgery) %>
+        </li>
+    <%end%>
     </li>
 </ol>
 
