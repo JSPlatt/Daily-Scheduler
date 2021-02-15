@@ -5,10 +5,5 @@ class Surgery < ApplicationRecord
   belongs_to :room
 
 
-def doctor
-  @doctor = Doctor.find(params[:id])
-end
-  
-
 
 end

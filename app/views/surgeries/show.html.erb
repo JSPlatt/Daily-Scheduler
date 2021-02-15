@@ -1,6 +1,14 @@
 <h1>Surgery Information</h1>
 
-<h2>Information: <%=@surgery.doctor%></h2>
+<h2>Doctor:<%=@surgery.doctor.name%></h2>
+<h3>Nurse:<%=@surgery.nurse.name%></h3>
+<h4>Patient:<%=@surgery.patient.name%></h4>
+
+<p>Procedure:<%=@surgery.patient.need%></p>
+
+<%=button_to "Cancel Surgery", "/surgeries/#{@surgery.id}", method: "delete"%><br>
+
+<%=button_to "Update Surgery", "/surgeries/#{@surgery.id}/edit", method: "patch"%>
 
 
 
