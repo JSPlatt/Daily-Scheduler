@@ -1,1 +1,9 @@
 <h1>Nurses</h1>
+
+<ul>
+    <% @nurses.each do |nurse| %>
+        <li>
+            <%=link_to nurse.name, nurse_path(nurse) %>
+        </li>
+    <%end%>
+</ul>
