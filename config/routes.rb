@@ -6,8 +6,5 @@ Rails.application.routes.draw do
   resources :doctors
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-# get 'surgeries', to: "surgeries#index"
-# patch "/surgeries/:id", to: "surgeries#update"
-
 
 end

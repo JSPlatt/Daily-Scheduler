@@ -1,7 +1,9 @@
 class SurgeriesController < ApplicationController
 
-    def index
+    def index  
         @surgeries = Surgery.all
+        @doctors = Doctor.all
+        @patients = Patient.all
     end
 
     def show
@@ -14,7 +16,12 @@ class SurgeriesController < ApplicationController
 
     def create
         @surgery = Surgery.create(surgery_params)
-        redirect_to surgery_path(@surgery)
+        redirect_to surgery_path(@surgery.id)
+    end
+
+    def edit  
+        @surgery = Surgery.find(params[:id])
+        redirect_to edit_surgery_path
     end
 
     def update
@@ -32,6 +39,6 @@ class SurgeriesController < ApplicationController
 private
 
     def surgery_params
-        params.require(:surgery).permit(:time)
+        params.require(:surgery).permit(:time, :patient_id, :doctor_id, :nurse_id)
     end
 end

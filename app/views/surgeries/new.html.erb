@@ -1,0 +1,16 @@
+<h1>Create New Surgery</h1>
+
+<%=form_for @surgery do |f| %>
+    <%=f.label :patient_id %>
+    <%=f.text_field :patient_id %>
+    <%=f.label :doctor_id%>
+    <%=f.collection_select :doctor_id, Doctor.all, :id, :name %>
+    <%=f.label :nurse_id%>
+    <%=f.collection_select :doctor_id, Nurse.all, :id, :name %>
+    <%=f.label :room_id%>
+    <%=f.collection_select :doctor_id, Room.all, :id, :number %>
+    <%=f.label :time%>
+    <%=f.number_field :time%>
+
+    <%=f.submit%>
+<%end%>
