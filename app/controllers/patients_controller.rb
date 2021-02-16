@@ -6,4 +6,19 @@ class PatientsController < ApplicationController
     def show
         @patient = Patient.find(params[:id])
     end
+
+    def new
+        @patient = Patient.new
+    end
+
+    def create
+        @patient = Patient.create(patient_params)
+        redirect_to new_patient_path
+    end
+    
+    private
+
+    def patient_params
+        params.require(:patient).permit(:name, :need)
+    end
 end

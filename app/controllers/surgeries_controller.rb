@@ -28,7 +28,7 @@ class SurgeriesController < ApplicationController
     def update
         @surgery = Surgery.find(params[:id])
         @surgery.update(surgery_params)
-        redirect_to surgeries_path
+        redirect_to surgery_path(@surgery)
     end
 
     def destroy
