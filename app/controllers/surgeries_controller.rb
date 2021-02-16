@@ -22,13 +22,13 @@ class SurgeriesController < ApplicationController
 
     def edit  
         @surgery = Surgery.find(params[:id])
-        redirect_to edit_surgery_path
+        #redirect_to edit_surgery_path
     end
 
     def update
         @surgery = Surgery.find(params[:id])
         @surgery.update(surgery_params)
-        redirect_to surgery_path(@surgery)
+        redirect_to edit_surgery_path(@surgery)
     end
 
     def destroy
@@ -40,6 +40,6 @@ class SurgeriesController < ApplicationController
 private
 
     def surgery_params
-        params.require(:surgery).permit(:time, :patient_id, :doctor_id, :nurse_id, :room_id)
+        params.permit(:time,:patient_id,:doctor_id,:nurse_id,:room_id)
     end
 end

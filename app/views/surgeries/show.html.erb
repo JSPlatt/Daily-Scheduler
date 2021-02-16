@@ -5,6 +5,7 @@
 <h4>Patient:<%=@surgery.patient.name%></h4>
 
 <p>Procedure:<%=@surgery.patient.need%></p>
+<p>Time: <%=@surgery.time%></p>
 
 <%=button_to "Cancel Surgery", "/surgeries/#{@surgery.id}", method: "delete"%><br>
 
