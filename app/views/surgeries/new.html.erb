@@ -12,5 +12,7 @@
     <%=f.label :time%>
     <%=f.number_field :time%>
 
-    <%=f.submit%>
+    <%#f.submit%>
+    <%=button_to "New Surgery", "/surgeries/#{@surgery.id}", method: "post"%><br>
+
 <%end%>
