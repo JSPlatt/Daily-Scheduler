@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 # post '/surgeries', to: "surgeries#create"
 # get '/surgeries/:id', to: "surgeries#show", as: "surgery"
 # get '/surgeries/:id/edit', to: "surgeries#edit", as: "edit_surgery"
-patch '/surgeries/:id/edit', to: "surgeries#update"
+#patch '/surgeries/:id', to: "surgeries#update"
 # delete '/surgeries/:id', to: "surgeries#destroy"
 
 end
