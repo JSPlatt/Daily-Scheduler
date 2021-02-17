@@ -16,13 +16,17 @@ class SurgeriesController < ApplicationController
 
     def create
         @surgery = Surgery.create(surgery_params)
-        redirect_to surgery_path(@surgery)
+        if @surgery.valid?
+            redirect_to surgery_path(@surgery)
+        else 
+            flash[:errors]= @surgery.errors.full_messages 
+            redirect_to new_surgery_path
+        end
     end
     
 
     def edit  
         @surgery = Surgery.find(params[:id])
-        #redirect_to edit_surgery_path
     end
 
     def update
