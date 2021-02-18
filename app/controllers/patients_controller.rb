@@ -13,7 +13,12 @@ class PatientsController < ApplicationController
 
     def create
         @patient = Patient.create(patient_params)
-        redirect_to new_surgery_path
+        if @patient.valid?
+            redirect_to patient_path(@patient)
+        else 
+            flash[:errors]= @patient.errors.full_messages 
+            redirect_to new_patient_path
+        end
     end
     
     private

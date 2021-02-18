@@ -1,5 +1,15 @@
 <h1>Create New Surgery</h1>
 
+<% if flash[:errors] %>
+    <ul>
+        <% flash[:errors].each do |message| %>
+            <li>
+                <%= message %>
+            </li>
+        <% end %>
+    </ul>
+<% end %>
+
 <%=form_for @surgery do |f| %>
     <%=f.label :patient_id %>
     <%=f.collection_select :patient_id, Patient.all, :id, :name %>

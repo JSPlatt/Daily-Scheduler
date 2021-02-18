@@ -7,4 +7,5 @@ class Patient < ApplicationRecord
     validates :name, presence: true
     validates :need, presence: true
 
+
 end

@@ -4,7 +4,7 @@ class Surgery < ApplicationRecord
   belongs_to :patient
   belongs_to :room
 
-  validates :time, numericality: {greater_than: 0}
-  validates :time, numericality: {less_than: 24}
+  validates :time, numericality: {greater_than_or_equal_to: 1}
+  validates :time, numericality: {less_than_or_equal_to: 23}
 
 end

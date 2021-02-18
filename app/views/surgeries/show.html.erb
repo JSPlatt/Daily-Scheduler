@@ -7,6 +7,7 @@
 <p>Procedure:<%=@surgery.patient.need%></p>
 <p>Time: <%=@surgery.time%></p>
 
+
 <%=button_to "Cancel Surgery", "/surgeries/#{@surgery.id}", method: "delete"%><br>
 
 <%=button_to "Update Surgery", "/surgeries/#{@surgery.id}/edit", method: "get"%><br>
