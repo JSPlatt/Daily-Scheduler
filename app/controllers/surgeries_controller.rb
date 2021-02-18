@@ -2,10 +2,6 @@ class SurgeriesController < ApplicationController
 
     def index  
         @surgeries = Surgery.all
-        @doctors = Doctor.all
-        @patients = Patient.all
-        @rooms = Room.all
-        @nurses = Nurse.all
     end
 
     def show

@@ -2,13 +2,13 @@
 
 <%=form_for @surgery do |f| %>
     <%=f.label :patient_id %>
-    <%=f.collection_select :patient_id, @patients, :id, :name %>
+    <%=f.collection_select :patient_id, Patient.all, :id, :name %>
     <%=f.label :doctor_id%>
-    <%=f.collection_select :doctor_id, @doctors, :id, :name %>
+    <%=f.collection_select :doctor_id, Doctor.all, :id, :name %>
     <%=f.label :nurse_id%>
-    <%=f.collection_select :nurse_id, @nurses, :id, :name %>
+    <%=f.collection_select :nurse_id, Nurse.all, :id, :name %>
     <%=f.label :room_id%>
-    <%=f.collection_select :room_id, @rooms, :id, :number %>
+    <%=f.collection_select :room_id, Room.all, :id, :number %>
     <%=f.label :time%>
     <%=f.number_field :time%>
     <%=f.submit%>
