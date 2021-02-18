@@ -4,6 +4,7 @@ class SurgeriesController < ApplicationController
         @surgeries = Surgery.all
         @doctors = Doctor.all
         @patients = Patient.all
+        @rooms = Room.all
     end
 
     def show
